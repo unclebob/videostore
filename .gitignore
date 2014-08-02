@@ -1,0 +1,11 @@
+target
+build
+.gradle
+.classpath
+.project
+.settings
+.env
+.idea
+*.iml
+.DS_Store
+deploy-local-libraries.sh
