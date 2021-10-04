@@ -26,11 +26,6 @@ public class VideoStoreTest{
     regular3 = new RegularMovie("Regular 3");
   }
 
-  private void assertAmountAndPointsForReport(double expectedAmount, int expectedPoints) {
-    assertEquals(expectedAmount, statement.getAmountOwed());
-    assertEquals(expectedPoints, statement.getFrequentRenterPoints());
-  }
-
   @Test
   public void testSingleNewReleaseStatement() {
     statement.addRental(new Rental(newRelease1, 3));
@@ -47,7 +42,7 @@ public class VideoStoreTest{
   }
 
   @Test
-  public void testSingleChildrensStatement() {
+  public void testSingleChildrenStatement() {
     statement.addRental(new Rental(children, 3));
     statement.makeRentalStatement();
     assertAmountAndPointsForReport(1.5, 1);
@@ -76,5 +71,10 @@ public class VideoStoreTest{
         "You owed 7.5\n" +
         "You earned 3 frequent renter points\n",
       statement.makeRentalStatement());
+  }
+
+  private void assertAmountAndPointsForReport(double expectedAmount, int expectedPoints) {
+    assertEquals(expectedAmount, statement.getAmountOwed());
+    assertEquals(expectedPoints, statement.getFrequentRenterPoints());
   }
 }
