@@ -10,7 +10,7 @@ public class VideoStoreTest{
   private RentalStatement statement;
   private Movie newRelease1;
   private Movie newRelease2;
-  private Movie childrens;
+  private Movie children;
   private Movie regular1;
   private Movie regular2;
   private Movie regular3;
@@ -20,7 +20,7 @@ public class VideoStoreTest{
     statement = new RentalStatement("Customer Name");
     newRelease1 = new NewReleaseMovie("New Release 1");
     newRelease2 = new NewReleaseMovie("New Release 2");
-    childrens = new ChildrensMovie("Childrens");
+    children = new ChildrensMovie("Children");
     regular1 = new RegularMovie("Regular 1");
     regular2 = new RegularMovie("Regular 2");
     regular3 = new RegularMovie("Regular 3");
@@ -48,7 +48,7 @@ public class VideoStoreTest{
 
   @Test
   public void testSingleChildrensStatement() {
-    statement.addRental(new Rental(childrens, 3));
+    statement.addRental(new Rental(children, 3));
     statement.makeRentalStatement();
     assertAmountAndPointsForReport(1.5, 1);
   }
