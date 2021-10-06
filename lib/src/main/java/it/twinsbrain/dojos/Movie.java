@@ -1,7 +1,7 @@
 package it.twinsbrain.dojos;
 
 public abstract class Movie {
-    private String title;
+    private final String title;
 
     public Movie(String title) {
         this.title = title;

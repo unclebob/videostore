@@ -19,7 +19,7 @@ public class VideoStoreTest{
     statement = new RentalStatement("Customer Name");
     newRelease1 = new NewReleaseMovie("New Release 1");
     newRelease2 = new NewReleaseMovie("New Release 2");
-    children = new ChildrensMovie("Children");
+    children = new ChildrenMovie("Children");
     regular1 = new RegularMovie("Regular 1");
     regular2 = new RegularMovie("Regular 2");
     regular3 = new RegularMovie("Regular 3");

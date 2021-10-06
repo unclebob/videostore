@@ -1,7 +1,7 @@
 package it.twinsbrain.dojos;
 
-public class ChildrensMovie extends Movie {
-  public ChildrensMovie(String title) {
+public class ChildrenMovie extends Movie {
+  public ChildrenMovie(String title) {
     super(title);
   }
 
