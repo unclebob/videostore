@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class RentalStatement {
-  private String name;
-  private List<Rental> rentals = new ArrayList<Rental>();
+  private final String name;
+  private final List<Rental> rentals = new ArrayList<>();
   private double totalAmount;
   private int frequentRenterPoints;
 
@@ -32,12 +32,12 @@ public class RentalStatement {
   }
 
   private String makeRentalLines() {
-    String rentalLines = "";
+    StringBuilder rentalLines = new StringBuilder();
 
     for (Rental rental : rentals)
-      rentalLines += makeRentalLine(rental);
+      rentalLines.append(makeRentalLine(rental));
 
-    return rentalLines;
+    return rentalLines.toString();
   }
 
   private String makeRentalLine(Rental rental) {
